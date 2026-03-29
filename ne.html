@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width">
+    <title>Virtuelle Sektormodelle</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="icon" href="v-semo_logo.png">
+</head>
+
+
+<body onresize="fitResponsiveCanvas()">
+
+<div id="canvas-overAll">
+
+    <!--<canvas id="canvas_buttons" class = "part"></canvas>-->
+
+    <div
+            id="container_side_bar_perm" class = "part">
+        <canvas id="canvas_side_bar_perm" class = "part"></canvas>
+    </div>
+
+    <div
+            id="container_side_tools_right" class = "part">
+        <canvas id="canvas_side_tools_right" class = "part"></canvas>
+    </div>
+
+    <div
+            id="container_exercise_box" class = "part">
+        <canvas id="canvas_exercise_box" class = "part"></canvas>
+    </div>
+
+
+    <div id="container_canvas" class = "part">
+        <canvas id="canvas" ></canvas>
+    </div>
+
+</div>
+
+
+<script>
+    defaultParams = {
+        showResetSectors: "1",
+        showAutoSet: "1",
+        showAutoComplete: "1",
+        showChangeDirection: "1",
+        showChangeStartPoint: "1",
+    };
+</script>
+
+
+<script src="url_variables.js"></script>
+<script src="fabric.js"></script>
+<script src="hammer.js"></script>
+<script src="v-semo_interface.js"></script>
+<script src="v-semo_exercise_box.js"></script>
+<script src="parameter_files/ne.js"></script>
+<script src="v-semo.js"></script>
+<!--<script src="main_nav_foot.js"></script>-->
+
+<script>
+    //Name des Bildes zum runterladen
+    let name_picture_result = "ergebnis_neutronenstern";
+
+    if (userName !== undefined){
+        name_picture_result += "_"
+        name_picture_result += userName
+    }
+</script>
+
+
+</body>
+
+</html>

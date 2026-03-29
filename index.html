@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-SeMo Sector Models - Supplementary Material</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .applet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .applet-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden; 
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .applet-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+            border-color: #007bff;
+        }
+
+        .card-image-link {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            display: block;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .applet-card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .applet-title {
+            color: #007bff;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .applet-desc {
+            font-size: 0.98rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .tags {
+            margin-bottom: 15px;
+        }
+
+        .variant-tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .highlight-tag {
+            background-color: #ffeeba;
+            color: #856404;
+        }
+
+        .applet-links {
+            margin-top: 20px;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+        }
+
+        .link-group a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .link-group a:hover {
+            text-decoration: underline;
+        }
+
+        .references, .url-parameters {
+            margin-top: 40px;
+            background-color: #e9ecef;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #6c757d;
+        }
+
+        .url-parameters {
+            border-left-color: #007bff;
+            background-color: #f1f4f9;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #343a40;
+            font-size: 1.5rem;
+        }
+
+        .url-parameters code {
+            background-color: #e9ecef;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .example-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .example-list li {
+            margin-bottom: 20px;
+        }
+
+        .example-list p {
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .url-link {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+            color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #495057;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Supplementary material for<br><i>V-SeMo: a digital learning environment for teaching general relativity with sector models</i></h1>
+        
+        <div class="subtitle">
+            <p>Explore the virtual sector models and guided activities below. Sector models are based on the foundational articles by C. Zahn and U. Kraus.</p>
+        </div>
+
+        <div class="applet-grid">
+            
+            <!-- Sphere Card -->
+            <div class="applet-card">
+                <a href="sp.html?lang=en" target="_blank" rel="noopener noreferrer" class="card-image-link">
+                    <img src="thumbnails/sphere.png" alt="Sphere Model Placeholder" class="card-image">
+                </a>
+                <div class="card-content">
+                  <a href="sp.html?lang=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div class="applet-title">Spherical Cap</div>
+                  </a>
+                    
+                    <div class="applet-links link-group">
+                        <a href="sp1.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: One Geodesic</a>
+                        <a href="sp2.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: Two Initially Parallel Geodesics</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saddle Card -->
+            <div class="applet-card">
+                <a href="sa.html?lang=en" target="_blank" rel="noopener noreferrer" class="card-image-link">
+                    <img src="thumbnails/saddle.png" alt="Saddle Model Placeholder" class="card-image">
+                </a>
+                <div class="card-content">
+                  <a href="sa.html?lang=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div class="applet-title">Saddle</div>
+                  </a>
+                    
+                    <div class="applet-links link-group">
+                        <a href="sa1.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: One Geodesic</a>
+                        <a href="sa2.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: Two Initially Parallel Geodesics</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Black Hole Card -->
+            <div class="applet-card">
+                <a href="bl.html?lang=en" target="_blank" rel="noopener noreferrer" class="card-image-link">
+                    <img src="thumbnails/black_hole.png" alt="Black Hole Model Placeholder" class="card-image">
+                </a>
+                <div class="card-content">
+                  <a href="bl.html?lang=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div class="applet-title">Equatorial Plane of a Black Hole</div>
+                  </a>
+                    
+                    <div class="applet-links link-group">
+                        <a href="bl1.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: One Geodesic</a>
+                        <a href="bl2.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: Digon</a>
+                        <a href="bl2p.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: Two Initially Parallel Geodesics</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Neutron Star Card -->
+            <div class="applet-card">
+                <a href="nech1.html?lang=en" target="_blank" rel="noopener noreferrer" class="card-image-link">
+                    <img src="thumbnails/neutronstar.png" alt="Neutron Star Model Placeholder" class="card-image">
+                </a>
+                <div class="card-content">
+                  <a href="nech1.html?lang=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div class="applet-title">Equatorial Plane of a Neutron Star</div>
+                  </a>
+                    <div class="tags">
+                        <span class="variant-tag highlight-tag">Guided Activity</span>
+                    </div>
+                    
+                    <div class="applet-links link-group">
+                        <a href="ne.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: Basic</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spacetime Card 1 -->
+            <div class="applet-card">
+                <a href="blst1.html?lang=en" target="_blank" rel="noopener noreferrer" class="card-image-link">
+                    <img src="thumbnails/spacetime_1.png" alt="Spacetime Model Placeholder" class="card-image">
+                </a>
+                <div class="card-content">
+                    <a href="blst1.html?lang=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                <div class="applet-title">Radial Ray of a Black Hole</div>
+            </a>
+                    <span class="variant-tag">Variant (1 Column)</span>
+                    
+                    <div class="applet-links link-group">
+                        <a href="blst2s.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: Two Light Signals</a>
+                        <a href="blst1t.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: Particle Thrown Upwards</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spacetime Card 2 -->
+            <div class="applet-card">
+                <a href="blst2.html?lang=en" target="_blank" rel="noopener noreferrer" class="card-image-link">
+                    <img src="thumbnails/spacetime_2.png" alt="Spacetime Model Placeholder" class="card-image">
+                </a>
+                <div class="card-content">
+                    <a href="blst2.html?lang=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                      <div class="applet-title">Radial Ray of a Black Hole</div>
+                    </a>
+                    <span class="variant-tag">Variant (2 Columns)</span>
+                    
+                    <div class="applet-links link-group">
+                        <a href="blst2f.html?lang=en" target="_blank" rel="noopener noreferrer">Applet: Two Particles Falling from Rest</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- URL Parameters Section -->
+        <div class="url-parameters">
+            <h3>URL Parameters</h3>
+            <p>The functionality of V-SeMo can be customized using URL parameters. These are <code>key=value</code> pairs appended to the URL following a question mark (?). How to change the language of the user interface or enable extra buttons like "Set Sectors", "Complete", "Direction", and "Joystick":</p>
+            
+            <ul class="example-list">
+                <li>
+                    <p>Sector model with default interface:</p>
+                    <a class="url-link" href="https://v-semo.github.io/review-material/sp2.html" target="_blank">https://v-semo.github.io/review-material/sp2.html</a>
+                </li>
+                <li>
+                    <p>Set language to English or German:</p>
+                    <a class="url-link" href="https://v-semo.github.io/review-material/sp2.html?lang=en" target="_blank">https://v-semo.github.io/review-material/sp2.html?lang=en</a><br>
+                    <a class="url-link" href="https://v-semo.github.io/review-material/sp2.html?lang=de" target="_blank">https://v-semo.github.io/review-material/sp2.html?lang=de</a>
+                </li>
+                <li>
+                    <p>Enable "Set Sectors" button:</p>
+                    <a class="url-link" href="https://v-semo.github.io/review-material/sp2.html?showSetSectors=1" target="_blank">https://v-semo.github.io/review-material/sp2.html?showSetSectors=1</a>
+                </li>
+                <li>
+                    <p>Enable "Complete" button:</p>
+                    <a class="url-link" href="https://v-semo.github.io/review-material/sp2.html?showAutoComplete=1" target="_blank">https://v-semo.github.io/review-material/sp2.html?showAutoComplete=1</a>
+                </li>
+                <li>
+                    <p>Enable "Direction" button:</p>
+                    <a class="url-link" href="https://v-semo.github.io/review-material/sp2.html?showChangeDirection=1" target="_blank">https://v-semo.github.io/review-material/sp2.html?showChangeDirection=1</a>
+                </li>
+                <li>
+                    <p>Enable "Joystick":</p>
+                    <a class="url-link" href="https://v-semo.github.io/review-material/sp2.html?showChangeStartPoint=1" target="_blank">https://v-semo.github.io/review-material/sp2.html?showChangeStartPoint=1</a>
+                </li>
+                <li>
+                    <p>Combine multiple options (use ampersand <code>&</code>):</p>
+                    <a class="url-link" href="https://v-semo.github.io/review-material/sp2.html?showSetSectors=1&showAutoComplete=1" target="_blank">https://v-semo.github.io/review-material/sp2.html?showSetSectors=1&showAutoComplete=1</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="references">
+            <h3>References</h3>
+            <p>The supplementary models provided above are based on the following foundational articles by C. Zahn and U. Kraus:</p>
+            <ul>
+                <li>
+                    <strong>Sector models—a toolkit for teaching general relativity: I. Curved spaces and spacetimes</strong><br>
+                    <a href="https://doi.org/10.1088/0143-0807/35/5/055020" target="_blank" rel="noopener noreferrer">https://doi.org/10.1088/0143-0807/35/5/055020</a>
+                </li>
+                <li>
+                    <strong>Sector models—a toolkit for teaching general relativity: II. Geodesics</strong><br>
+                    <a href="https://doi.org/10.1088/1361-6404/aae3b5" target="_blank" rel="noopener noreferrer">https://doi.org/10.1088/1361-6404/aae3b5</a>
+                </li>
+                <li>
+                    <strong>Sector models—a toolkit for teaching general relativity: III. Spacetime geodesics</strong><br>
+                    <a href="https://doi.org/10.1088/1361-6404/aae3b7" target="_blank" rel="noopener noreferrer">https://doi.org/10.1088/1361-6404/aae3b7</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
